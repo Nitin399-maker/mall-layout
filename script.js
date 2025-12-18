@@ -132,7 +132,7 @@ function animateShopperMovement(floorId, pathElement) {
         current.y = point.y;
         shopper.setAttribute('cx', point.x);
         shopper.setAttribute('cy', point.y);
-        if (isMoving[floorId]) {  requestAnimationFrame(animate);  }
+        if (isMoving[floorId]) { requestAnimationFrame(animate); }
     }
     animate();
 }
@@ -151,13 +151,13 @@ function updateRightPanel(nearestShops, floorId) {
     const currentShopInfo = document.getElementById('currentShopInfo');
     if (nearestShops.length > 0) {
         const closest = nearestShops[0];
-        currentShopInfo.innerHTML = `<strong>${closest.shopNumber} - ${closest.shop}</strong><br><small>Distance: ${closest.distance.toFixed(0)}px</small>`;
+        currentShopInfo.innerHTML = `<strong>${closest.shopNumber} - ${closest.shop}</strong><br><small>Distance: ${closest.distance.toFixed(0)}px</small>`; 
         document.querySelectorAll('.shop').forEach(shop => shop.classList.remove('shop-highlight'));
         closest.element.classList.add('shop-highlight');
     }
     const nearbyShopsInfo = document.getElementById('nearbyShopsInfo');
     if (nearestShops.length > 1) {
-        const nearby = nearestShops.slice(1).map(shop => 
+        const nearby = nearestShops.slice(1).map(shop =>
             `<div class="small">${shop.shopNumber} - ${shop.shop} (${shop.distance.toFixed(0)}px)</div>`
         ).join('');
         nearbyShopsInfo.innerHTML = nearby;
@@ -218,7 +218,7 @@ function clearNotifications() {
     const persona = personas[currentPersona];
     panel.innerHTML = `
         <div class="text-center text-muted p-2">
-            <i class="fas fa-route fa-lg mb-1"></i>
+            <i class="bi bi-route display-6 mb-2"></i>
             <div class="small">Start walking to receive notifications for ${persona.name}</div>
         </div>
     `;
@@ -246,5 +246,5 @@ function updatePersonaDisplay() {
         personaAvatarElement.alt = persona.name;
     }
     
-    if (currentJourneyNotifications.length === 0) {  clearNotifications();  }
+    if (currentJourneyNotifications.length === 0) { clearNotifications(); }
 }
