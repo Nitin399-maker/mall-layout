@@ -1,5 +1,7 @@
 # 🛍️ Mall Analytics — Interactive Shopper Journey Simulator
 
+> **This is a demo. It contains no confidential data/IP.**
+
 A **single-page web app** that visualizes an **interactive U-shaped mall walkway** and simulates **shopper movement + persona-based notifications** in real time.
 
 You can:
